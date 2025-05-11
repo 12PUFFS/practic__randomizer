@@ -8,7 +8,6 @@ class RandomizerService {
     throw new Error('Invalid participants list');
   }
   
-  // Добавляем новых участников БЕЗ очистки существующих
   const query = `
     INSERT INTO participants (name)
     SELECT unnest($1::text[])

@@ -31,5 +31,4 @@ class ParticipantController {
   }
 }
 
-// Важно: правильный экспорт
 module.exports = ParticipantController;

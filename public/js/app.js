@@ -9,11 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const refreshHistoryBtn = document.getElementById('refreshHistory');
   const winnersHistory = document.getElementById('winnersHistory');
 
-  // загрузка участников в историю при запуск.
   loadParticipants();
   loadWinnersHistory();
 
-  // события displayParticipants  
   addParticipantsBtn.addEventListener('click', addParticipants);
   clearParticipantsBtn.addEventListener('click', clearParticipants);
   drawWinnersBtn.addEventListener('click', drawWinners);

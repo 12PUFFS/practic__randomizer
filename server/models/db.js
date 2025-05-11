@@ -9,7 +9,6 @@ const pool = new Pool({
   port: process.env.DB_PORT || 5432
 });
 
-// Добавьте эту функцию
 const connect = async () => {
   try {
     const client = await pool.connect();
@@ -24,5 +23,5 @@ const connect = async () => {
 
 module.exports = {
   pool,
-  connect  // Добавляем функцию в экспорт
+  connect
 };
