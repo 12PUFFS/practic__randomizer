@@ -1,0 +1,41 @@
+{
+  "name": "randomayz_du23",
+  "version": "1.0.0",
+  "description": "Randomizer for prize draws with PostgreSQL",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "dev": "nodemon server/app.js",
+    "test": "jest",
+    "db:create": "psql -U postgres -c 'CREATE DATABASE randomayz_db;'",
+    "db:setup": "psql -U postgres -d randomayz_db -f db/setup.sql"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pigrew1337/randomayz_du23.git"
+  },
+  "keywords": [
+    "randomizer",
+    "postgresql",
+    "express"
+  ],
+  "author": "Your Name",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pigrew1337/randomayz_du23/issues"
+  },
+  "homepage": "https://github.com/pigrew1337/randomayz_du23#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "node-mocks-http": "^1.17.2",
+    "nodemon": "^3.1.0",
+    "supertest": "^6.3.3"
+  }
+}

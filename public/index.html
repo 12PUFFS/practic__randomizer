@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Randomizer</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Randomizer for Prize Draw</h1>
+    
+    <div class="section">
+      <h2>Participants</h2>
+      <textarea id="participantsInput" placeholder="Enter participants, one per line"></textarea>
+      <div class="buttons">
+        <button id="addParticipants">Add Participants</button>
+        <button id="clearParticipants">Clear All</button>
+      </div>
+      <div id="participantsList"></div>
+    </div>
+    
+    <div class="section">
+      <h2>Draw Winners</h2>
+      <div class="draw-controls">
+        <input type="number" id="winnersCount" min="1" value="1">
+        <button id="drawWinners">Draw</button>
+      </div>
+      <div id="winnersResult"></div>
+    </div>
+    
+    <div class="section">
+      <h2>Winners History</h2>
+      <button id="refreshHistory">Refresh</button>
+      <div id="winnersHistory"></div>
+    </div>
+  </div>
+<link rel="stylesheet" href="/css/style.css">
+<script src="/js/app.js"></script>
+</body>
+</html>
