@@ -8,24 +8,24 @@ const winnersRoutes = require('./routes/winners');
 
 const app = express();
 
-// мидлваер
+// Middleware
 app.use(cors());
 app.use(bodyParser.json());
 
-// обслуга статик файлов из публик
+// Обслуживание статических файлов
 app.use(express.static(path.join(__dirname, '../public')));
 
-// апи роутер
+// API routes
 app.use('/api/participants', participantsRoutes);
 app.use('/api/winners', winnersRoutes);
 
-// запасник для SPA
+// Fallback для SPA
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
-// тест базы данных на конект
-db.connect()
+// Проверка подключения к БД
+db.query('SELECT 1')
   .then(() => {
     console.log('Connected to PostgreSQL');
     const PORT = process.env.PORT || 3000;
